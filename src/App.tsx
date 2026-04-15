@@ -2,16 +2,11 @@ import { useState, useEffect } from 'react'
 import { 
   Star, 
   Layout, 
-  Code, 
-  Bug, 
   Send, 
   ShieldCheck, 
-  Wifi, 
-  Eye, 
   PlusCircle, 
   Heart, 
   CheckCircle2,
-  Table as TableIcon,
   ChevronLeft,
   Users
 } from 'lucide-react'
