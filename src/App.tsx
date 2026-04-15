@@ -24,7 +24,7 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-const API_BASE = 'http://localhost:5000/api'
+const API_BASE = 'https://feedback-grad-server.onrender.com/api'
 
 interface FeedbackData {
   id?: number
