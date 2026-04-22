@@ -76,6 +76,20 @@ export default function App() {
     }
   }, [])
 
+  // Server warm-up (wake up Render server)
+  useEffect(() => {
+    const warmup = async () => {
+      try {
+        console.log('Warming up server...')
+        await axios.get(`${API_BASE}/ping`)
+        console.log('Server is awake!')
+      } catch (error) {
+        console.error('Server warm-up failed', error)
+      }
+    }
+    warmup()
+  }, [])
+
   const navigateTo = (path: string) => {
     window.history.pushState({}, '', path)
     const event = new PopStateEvent('popstate')
